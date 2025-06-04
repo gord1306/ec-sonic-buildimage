@@ -48,7 +48,7 @@ fi
 ARCH=$(dpkg --print-architecture)
 DISTRO=$(grep CODENAME /etc/os-release | cut -d= -f2)
 if [ "$ARCH" != "$CONFIGURED_ARCH" ] || [ "$DISTRO" != "$IMAGE_DISTRO" ]; then
-    "Not support to build different ARCH/DISTRO ${CONFIGURED_ARCH}:${IMAGE_DISTRO} in ${ARCH}:${DISTRO}."
+    echo "Not support to build different ARCH/DISTRO ${CONFIGURED_ARCH}:${IMAGE_DISTRO} in ${ARCH}:${DISTRO}."
     exit 1
 fi
 
